@@ -22,8 +22,8 @@ main #sec-intro .side-content-img{
     background-image: url("../img/menina-estudando-img.jpg");
 }
 main #sec-intro .side-content{
-    height: 300px;
-    background-color: #7BCCCE;
+    height: 330px;
+    background-color: #007d82;
 }
 main #sec-intro .side-content h2{
     font-size: 65px;
@@ -32,32 +32,135 @@ main #sec-intro .side-content h2{
 main #sec-intro .side-content h4{
     font-size: 15px;
     padding: 10px 30px;
+    text-align: center;
 }
 main #sec-intro .side-content .btn-download{
     position:absolute;
     width: 150px;
     height: 40px;
     background-color: white;
-    color: #7BCCCE;
+    color: #007d82;
     line-height: 40px;
     text-align: center;
     bottom: 20px;
     left: calc(50% - 75px);
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 main #sec-about{
-    height: 600px;
+    height: 700px;
 }
 main #sec-about .side-content-img{
-    height: 600px;
+    height: 700px;
     background-image: url("../img/sugestoes-img.jpg");
 }
 main #sec-about .side-content{
-    height: 500px;
-    background-color: #03A4E9;
+    height: 640px;
+    background-color: #00638e;
     right: 0;
+}
+
+@media screen and (min-width: 360px){
+    main #sec-about,
+    main #sec-about .side-content-img{
+        height: 600px;
+    }
+    main #sec-about .side-content{
+        height: 570px;
+    }
+}
+
+@media screen and (min-width: 411px){
+    main #sec-about,
+    main #sec-about .side-content-img{
+        height: 580px;
+    }
+    main #sec-about .side-content{
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 570px){
+    main #sec-about,
+    main #sec-about .side-content-img{
+        height: 420px;
+    }
+    main #sec-about .side-content{
+        height: 380px;
+    }
+}
+
+@media screen and (min-width: 980px){
+    main #sec-about,
+    main #sec-about .side-content-img{
+        height: 340px;
+    }
+    main #sec-about .side-content{
+        height: 290px;
+    }
+    main .side-content h2{
+        text-align: inherit !important;
+    }
+    main .sec-content .side-content-centered{
+        display: inherit !important;
+        align-items: flex-start !important;
+    }
+    main #sec-charac .side-content .citae-charac{
+        margin: auto;
+    }
+    main #sec-intro .side-content h2{
+        padding: 20px 0px 0px 50px;
+        margin: 30px 0 0 0;
+    }
+    main #sec-intro .side-content h4{
+        text-align: left;
+        padding: 10px 50px;
+    }
+    main #sec-intro .side-content .btn-download{
+        left: 50px;
+        bottom: 40px;
+    }
+    main #sec-intro .side-content-img{
+        height: 350px;
+    }
+    main #sec-intro .side-content{
+        height: 280px;
+    }
+    main #sec-charac .side-content .citae-charac{
+        flex-flow: wrap !important;
+    }
+    main #sec-charac .side-content .citae-charac .charac-box{
+        width: calc(100% / 3) !important;
+    }
+    main #sec-charac .side-content{
+        height: 290px !important;
+    }
+    main #sec-charac .side-content-img,
+    main #sec-charac{
+        height: 380px !important;
+    }
+    main .sec-content .sugestions .sug-box .sugestion-form .group-one{
+        display: flex !important;
+        flex-flow: wrap !important;
+    }
+    main .sec-content .sugestions .sug-box .sugestion-form input:not([type="submit"]){
+        width: calc(100% / 3) !important;
+    }
+    main .sec-content .sugestions .sug-box .sugestion-form input:not([type="submit"]):nth-child(2),
+    main .sec-content .sugestions .sug-box .sugestion-form input:not([type="submit"]):nth-child(3){
+        border-left: solid 1px black;
+    }
+    main .sec-content .sugestions{
+        height: 410px !important;
+    }
+    main .sec-content .sugestions .sug-box .sugestion-form input[type="submit"]{
+        width: 200px !important;
+        float: right;
+    }
+    main .sec-content .sugestions .sug-box .sugestion-form{
+        margin-top: 30px;
+    }
 }
 
 main #sec-charac{
@@ -69,7 +172,7 @@ main #sec-charac .side-content-img{
 }
 main #sec-charac .side-content{
     height: 500px;
-    background-color: #7BCCCE;
+    background-color: #007d82;
 }
 main #sec-charac .side-content .citae-charac{
     width: 90%;
@@ -132,6 +235,9 @@ main .sec-content .sugestions .sug-box h2{
 main .side-content p{
     padding: 0 25px;
 }
+main .side-content p:nth-of-type(2){
+    margin-top: 10px;
+}
 main .sec-content .side-content-centered{
     display: flex;
     flex-flow: column;
@@ -190,8 +296,8 @@ main .sec-content .sugestions .sug-box{
     flex-flow: column;
 }
 main .sec-content .sugestions .sug-box .sugestion-form{
-    width: 90%;
-    height: auto;    
+    width: 75%;
+    height: auto;  
 }
 main .sec-content .sugestions .sug-box .sugestion-form .group-one{
     width: 100%;
@@ -200,10 +306,10 @@ main .sec-content .sugestions .sug-box .sugestion-form .group-one{
 main .sec-content .sugestions .sug-box .sugestion-form input,
 main .sec-content .sugestions .sug-box .sugestion-form textarea{
     border: none;
-    font-size: 13px;
-    text-transform: uppercase;
+    font-size: 11px;
     font-weight: 500;
     border-bottom: solid 1px black;
+    padding: 10px;
 }
 main .sec-content .sugestions .sug-box .sugestion-form input{
     width: 100%;
