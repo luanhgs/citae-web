@@ -12,6 +12,9 @@ main{
     align-items: center;
     flex-flow: column;    
 }
+a, input[type="submit"]{
+    cursor: pointer;
+}
 
 /*especificações de cada ID*/
 main #sec-intro{
@@ -187,6 +190,7 @@ main #sec-charac .side-content .citae-charac .charac-box{
     line-height: 60px;
     text-align: center; 
     font-size: 12px;
+    font-weight: 400;
 }
 main #sec-charac .side-content .citae-charac .charac-box:nth-child(1){
     background-color: #5B5A9F;
@@ -339,15 +343,23 @@ main #sec-app-images .back-imgs{
     width: 100%;
     max-width: 400px;
     height: auto;
-    background-color: #e1e9ec;
     display: flex;
     align-items: center;
 }
-main #sec-app-images .back-imgs .swiper-slide img{
+main #sec-app-images .back-imgs .img-print-screens{
     width: 100%;
 }
+main #sec-app-images .back-imgs .img-print-screens:nth-child(1){
+    display: none;
+}
 @media screen and (min-width: 500px){
-    .swiper-container{
-        display: none !important;
+    main #sec-app-images .back-imgs{
+        max-width: none;
+    }
+    main #sec-app-images .back-imgs .img-print-screens:nth-child(1){
+        display: block;
+    }
+    main #sec-app-images .back-imgs .img-print-screens:nth-child(2){
+        display: none;
     }
 }

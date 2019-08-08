@@ -4,8 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CITAÊ || Encontre citações</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/citae-style.css">
     <link rel="shortcut icon" href="assets/img/citaê.png" type="image/x-icon">
 </head>
 <body>
@@ -32,44 +31,10 @@
         </section>
         <section id="sec-app-images" class="sec-content">
             <div class="back-imgs">
-                <!-- Swiper -->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="assets/img/pag/Página Inicial.svg" alt="" srcset="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/img/pag/Detalhar Citação.svg" alt="" srcset="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/img/pag/Detalhar Categoria.svg" alt="" srcset="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/img/pag/Detalhar Autor.svg" alt="" srcset="">
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-    
-                <!-- Swiper JS -->
-                <script src="assets/js/swiper.js"></script>
+                <!-- Prints (Telas grandes) -->
+                <img class="img-print-screens" src="assets/img/citae-prints.svg" >
+                <img class="img-print-screens" src="assets/img/citae-prints-tablet.svg" >
                 
-                <!-- Initialize Swiper -->
-                <script>
-                    var swiper = new Swiper('.swiper-container', {
-                        spaceBetween: 30,
-                        centeredSlides: true,
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                    });
-                </script>
             </div>
         </section>
         <section id="sec-charac" class="sec-content">
@@ -103,6 +68,6 @@
             </div>
         </section>
     </main>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/citae-script.js"></script>
 </body>
 </html>
