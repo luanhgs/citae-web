@@ -22,7 +22,7 @@ main #sec-intro{
 }
 main #sec-intro .side-content-img{
     height: 400px;
-    background-image: url("../img/menina-estudando-img.jpg");
+    background-image: url("../img/menina-estudando-img-min.jpg");
 }
 main #sec-intro .side-content{
     height: 330px;
@@ -56,7 +56,7 @@ main #sec-about{
 }
 main #sec-about .side-content-img{
     height: 700px;
-    background-image: url("../img/sugestoes-img.jpg");
+    background-image: url("../img/sugestoes-img-min.jpg");
 }
 main #sec-about .side-content{
     height: 640px;
@@ -172,7 +172,7 @@ main #sec-charac .side-content-img{
     height: 550px;
 }
 main #sec-charac .side-content-img{
-    background-image: url("../img/charac-img.jpg");
+    background-image: url("../img/charac-img-min.jpg");
 }
 main #sec-charac .side-content{
     height: 500px;
@@ -278,7 +278,7 @@ main .sec-content .sugestions{
     background-size: cover;
     width: 100%;
     height: 550px;
-    background-image: url("../img/contact-img.jpg");
+    background-image: url("../img/contact-img-min.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
