@@ -219,11 +219,13 @@ main .sec-content{
     position: relative;
     display: flex;
     align-items: center;
+    transition: all 300ms ease-in-out;
 }
 main .sec-content .side-content-img,
 main .sec-content .side-content{
     position: absolute;
     width: 90%;
+    transition: all 300ms ease-in-out;
 }
 main .side-content{
     opacity: .9;
@@ -338,6 +340,7 @@ main .sec-content .sugestions .sug-box .sugestion-form input[type="submit"]{
 }
 main #sec-app-images{
     justify-content: center;
+    max-width: 900px;
 }
 main #sec-app-images .back-imgs{
     width: 100%;
@@ -362,4 +365,30 @@ main #sec-app-images .back-imgs .img-print-screens:nth-child(1){
     main #sec-app-images .back-imgs .img-print-screens:nth-child(2){
         display: none;
     }
+}
+
+/*----EFEITO DE FADE----*/
+
+main .sec-content{
+    opacity: 0;
+}
+main .sec-content .side-content-img-cyan,
+main .sec-content .side-content-img-blue ~ .side-content{
+    right: -40px !important;
+}
+main .sec-content .side-content-img-blue,
+main .sec-content .side-content-img-cyan ~ .side-content{
+    left: -40px !important;
+}
+
+main .showed-content{
+    opacity: 1;    
+}
+main .showed-content .side-content-img-blue ~ .side-content,
+main .showed-content .side-content-img-cyan{
+    right: 0px !important;
+}
+main .showed-content .side-content-img-cyan ~ .side-content,
+main .showed-content .side-content-img-blue{
+    left: 0px !important;
 }
