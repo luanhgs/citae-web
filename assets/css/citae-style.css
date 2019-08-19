@@ -7,6 +7,70 @@
     font-weight: lighter;
     text-decoration: none;
 }
+#loading-page{
+    z-index: 3;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    background-color: #40f3e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 150ms ease-in-out, visibility 0s linear 150ms;
+    opacity: 1;
+}
+
+#loading-page img{
+    width: 30px;
+    height: 30px;
+}
+
+.page-loaded #loading-page{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#loading-page #loader {
+    animation: animate 1.5s linear infinite;
+    clip: rect(0, 80px, 80px, 40px); 
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+  }
+  @keyframes animate {
+    0% { 
+      transform: rotate(0deg)
+    }
+    100% { 
+      transform: rotate(220deg)
+    }
+  }
+  #loading-page #loader:after {
+    animation: animate2 1.5s ease-in-out infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    content:'';
+    border-radius: 50%; 
+    height: 80px;
+    width: 80px;
+    position: absolute; 
+  } 
+  @keyframes animate2 {
+    0% {
+      box-shadow: inset #fff 0 0 0 17px;
+      transform: rotate(-140deg);
+    }
+    50% {
+      box-shadow: inset #fff 0 0 0 2px;
+    }
+    100% {
+      box-shadow: inset #fff 0 0 0 17px;
+      transform: rotate(140deg);
+    }
+  }
 main{
     display: flex;
     align-items: center;
