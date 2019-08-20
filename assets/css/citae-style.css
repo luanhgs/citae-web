@@ -7,6 +7,9 @@
     font-weight: lighter;
     text-decoration: none;
 }
+body{
+    overflow: hidden;
+}
 #loading-page{
     z-index: 3;
     position: fixed;
@@ -20,7 +23,6 @@
     justify-content: center;
     transition: opacity 150ms ease-in-out, visibility 0s linear 150ms;
     opacity: 1;
-    overflow: hidden;
 }
 
 #loading-page img{
@@ -31,6 +33,9 @@
 .page-loaded #loading-page{
     opacity: 0;
     visibility: hidden;
+}
+
+.page-loaded{
     overflow: scroll;
 }
 
