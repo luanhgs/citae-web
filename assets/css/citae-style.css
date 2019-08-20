@@ -20,6 +20,7 @@
     justify-content: center;
     transition: opacity 150ms ease-in-out, visibility 0s linear 150ms;
     opacity: 1;
+    overflow: hidden;
 }
 
 #loading-page img{
@@ -30,47 +31,59 @@
 .page-loaded #loading-page{
     opacity: 0;
     visibility: hidden;
+    overflow: scroll;
 }
 
 #loading-page #loader {
-    animation: animate 1.5s linear infinite;
-    clip: rect(0, 80px, 80px, 40px); 
-    height: 80px;
-    width: 80px;
     position: absolute;
-    left: calc(50% - 40px);
-    top: calc(50% - 40px);
-  }
-  @keyframes animate {
-    0% { 
-      transform: rotate(0deg)
-    }
-    100% { 
-      transform: rotate(220deg)
-    }
-  }
-  #loading-page #loader:after {
-    animation: animate2 1.5s ease-in-out infinite;
-    clip: rect(0, 80px, 80px, 40px);
-    content:'';
-    border-radius: 50%; 
-    height: 80px;
-    width: 80px;
-    position: absolute; 
-  } 
-  @keyframes animate2 {
-    0% {
-      box-shadow: inset #fff 0 0 0 17px;
-      transform: rotate(-140deg);
-    }
-    50% {
-      box-shadow: inset #fff 0 0 0 2px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #ffffff;
+    animation: spin 2s linear infinite;
+}
+#loading-page #loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #ffffff;
+    animation: spin 3s linear infinite;
+}
+#loading-page #loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #ffffff;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        transform: rotate(0deg);
     }
     100% {
-      box-shadow: inset #fff 0 0 0 17px;
-      transform: rotate(140deg);
+        transform: rotate(360deg);
     }
-  }
+}
+@keyframes spin {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 main{
     display: flex;
     align-items: center;
