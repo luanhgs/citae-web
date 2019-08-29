@@ -130,7 +130,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\FavoritesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\QuoteController.cs" />
+    <Compile Include="Controllers\QuotesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -155,14 +155,14 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\User\index.cshtml" />
-    <Content Include="Views\Favorites\index.cshtml" />
-    <Content Include="Views\Categories\index.cshtml" />
-    <Content Include="Views\Categories\View.cshtml" />
-    <Content Include="Views\Authors\index.cshtml" />
-    <Content Include="Views\Authors\View.cshtml" />
-    <Content Include="Views\Quote\index.cshtml" />
-    <Content Include="Views\Quote\View.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Favorites\Index.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Categories\Detail.cshtml" />
+    <Content Include="Views\Authors\Index.cshtml" />
+    <Content Include="Views\Authors\Detail.cshtml" />
+    <Content Include="Views\Quotes\Index.cshtml" />
+    <Content Include="Views\Quotes\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,15 +10,11 @@ namespace Citae_Application.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "Favoritos";
             return View();
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult Contact()
+        public ActionResult Detail()
         {
             return View();
         }

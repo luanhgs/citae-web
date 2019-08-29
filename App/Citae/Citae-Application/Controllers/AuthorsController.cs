@@ -6,21 +6,18 @@ using System.Web.Mvc;
 
 namespace Citae_Application.Controllers
 {
-    public class AuthorsController
+    public class AuthorsController : Controller
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "Autores";
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Detail()
         {
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            return View();
-        }
     }
 }

@@ -10,16 +10,7 @@ namespace Citae_Application.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
+            ViewBag.Title = "Dados do Usuário";
             return View();
         }
     }
