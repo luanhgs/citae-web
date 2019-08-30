@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="~/Images/Icons/citaê.png" type="image/x-icon">
-    <title>CITAE | @ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../Assets/css/normalize.css">
+    <link rel="stylesheet" href="../../Assets/css/citae-layout.css">
+    <link rel="stylesheet" href="../../Assets/css/user-layout.css">
+    <link rel="shortcut icon" href="../../Assets/img/icons/citaê.png" type="image/x-icon">
+    <title>Início</title>
 </head>
 <body>
     <!--Fundo escuro-->
@@ -21,8 +22,8 @@
             <form id="search-form" action="" method="post">
                 <input placeholder="PESQUISAR NO CITAÊ" id="input-search" type="search" name="" id="">
             </form>
-            <a id="btn-user" href="@Url.Action("Index", "User")">
-                <img src="~/Images/Samples/mario.jpg" alt="" srcset="">
+            <a id="btn-user" href="#">
+                <img src="../../Assets/img/samples/mario.jpg" alt="" srcset="">
             </a>
         </div>
     </nav>
@@ -30,31 +31,31 @@
     <!--Menu que da acesso às páginas-->
     <nav id="menu">
         <div class="img-logo">
-            <img src="~/Images/Icons/citaê.svg" alt="" srcset="">
+            <img src="../../Assets/img/icons/citaê.svg" alt="" srcset="">
         </div>
         <ul class="menu-itens">
             <li>
-                <a href="@Url.Action("Index", "Home")">
+                <a href="http://">
                     <i class="fas fa-home"></i> <span>Página Inicial</span>
                 </a>
             </li>
             <li>
-                <a href="@Url.Action("Index", "Categories")">
+                <a href="http://">
                     <i class="fas fa-stream"></i> <span>Categorias</span>
                 </a>
             </li>
             <li>
-                <a href="@Url.Action("Index", "Quotes")">
+                <a href="http://">
                     <i class="fas fa-quote-right"></i> <span>Citações</span>
                 </a>
             </li>
             <li>
-                <a href="@Url.Action("Index", "Authors")">
+                <a href="http://">
                     <i class="fas fa-portrait"></i> <span>Autores</span>
                 </a>
             </li>
             <li>
-                <a href="@Url.Action("Index", "Favorites")">
+                <a href="http://">
                     <i class="fas fa-heart"></i> <span>Favoritos</span>
                 </a>
             </li>
@@ -63,12 +64,17 @@
 
     <!--Conteúdo-->
     <main id="content-app">
-        @RenderBody()
+        <div id="user-box-edit">
+            <img src="../../Assets/img/samples/mario.jpg" alt="" srcset="">
+            <span>Mário Sérgio</span>
+            <form id="user-edit-form" action="" method="post">
+                <input type="email" placeholder="Email" name="" id="">
+                <input type="password" placeholder="Senha" name="" id="">
+                <input type="submit" value="SALVAR">
+            </form>
+        </div>
     </main>
-
-
-    @Scripts.Render("~/Scripts/base-javascript")
-    @RenderSection("scripts", required: false)
+    <script src="../../Assets/js/citae-transitions.js"></script>
     <script src="https://kit.fontawesome.com/88787e614f.js"></script>
 </body>
 </html>

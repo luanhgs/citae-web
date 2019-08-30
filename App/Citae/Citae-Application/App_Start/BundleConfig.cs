@@ -9,12 +9,18 @@ namespace Citae_Application
         public static void RegisterBundles(BundleCollection bundles)
         {
             //Todos os arquivos de script
-            bundles.Add(new ScriptBundle("~/Scripts/javascript").Include(
-                        "~/Scripts/citae-script.js")); 
+            bundles.Add(new ScriptBundle("~/Scripts/base-javascript").Include(
+                        "~/Scripts/citae-script.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/detail-javascript").Include(
+                        "~/Scripts/detail-script.js"));
 
             //Todos os arquivos de estlização
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/citae-style.css"));
+                      "~/Content/citae-layout.css",
+                      "~/Content/user-layout.css",
+                      "~/Content/normalize.css"));
+            bundles.Add(new StyleBundle("~/Content/detail-css").Include(
+                      "~/Content/detail-layout.css"));
         }
     }
 }

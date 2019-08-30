@@ -1,0 +1,43 @@
+#user-box-edit{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 40px;
+}
+#user-box-edit img{
+    width: 100px;
+    border-radius: 100%;
+}
+#user-box-edit img + span{
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 300;
+}
+#user-box-edit #user-edit-form{
+    width: 250px;
+    margin-top: 15px;
+}
+#user-box-edit #user-edit-form input{
+    height: 40px;
+}
+#user-box-edit #user-edit-form input:not([type="submit"]){
+    width: 100%;
+    border: none;
+    border-bottom: solid 2px #35b7ff;
+    padding: 0 10px;
+    font-size: 15px;
+}
+#user-box-edit #user-edit-form input[type="submit"]{
+    width: 150px;
+    margin-left: 50px;
+    font-size: 12px;
+    background-color: #35b7ff;
+    color: white;
+    border: none;
+}
+#user-box-edit #user-edit-form input:not(:first-of-type){
+    margin-top: 15px;
+}
