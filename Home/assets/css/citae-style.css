@@ -36,7 +36,7 @@ body{
 }
 
 .page-loaded{
-    overflow: scroll;
+    overflow: auto;
 }
 
 #loading-page #loader {
