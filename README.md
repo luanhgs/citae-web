@@ -6,4 +6,4 @@
 
 * ### [Documento](https://docs.google.com/document/d/1fMyR-lFEppkZLv8N6gcPT8xl44EtuWKYgHCbpMYDMmg/edit?usp=sharing)
 
-* ## [Mapa do Site](https://www.lucidchart.com/invitations/accept/6bc01691-d123-4fe8-80c4-cf00c31452fb)
+* ### [Mapa do Site](https://www.lucidchart.com/invitations/accept/6bc01691-d123-4fe8-80c4-cf00c31452fb)
