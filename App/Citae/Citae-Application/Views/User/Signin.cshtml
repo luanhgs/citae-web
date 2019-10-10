@@ -1,0 +1,13 @@
+﻿@model Citae_Application.Models.Usuario
+
+<div id="user-box-edit">
+    @using (Html.BeginForm("Signin", "User", FormMethod.Post, new { @id = "user-edit-form", @class = "signin-form" }))
+    {
+        @Html.TextBoxFor(p => p.nome, new { @placeholder = "Nome" })
+        @Html.TextBoxFor(p => p.email, new { @type = "email", @placeholder = "Email" })
+        <span>ERRO</span>
+        @Html.TextBoxFor(p => p.senha, new { @type = "password", @placeholder = "Senha" })
+        <span>ERRO</span>
+        <input type="submit" value="CRIAR CONTA">
+    }
+</div>

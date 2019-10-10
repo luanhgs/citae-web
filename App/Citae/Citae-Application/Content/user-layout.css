@@ -22,6 +22,9 @@
     #user-box-edit #user-edit-form {
         width: 250px;
         margin-top: 15px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
     }
 
         #user-box-edit #user-edit-form input {
@@ -38,13 +41,41 @@
 
             #user-box-edit #user-edit-form input[type="submit"] {
                 width: 150px;
-                margin-left: 50px;
                 font-size: 12px;
                 background-color: #35b7ff;
                 color: white;
                 border: none;
             }
 
-            #user-box-edit #user-edit-form input:not(:first-of-type) {
+            #user-box-edit #user-edit-form input[type="password"] {
                 margin-top: 15px;
             }
+
+        #user-box-edit #user-edit-form a {
+            font-size: 12px;
+            color: #7bccce;
+            border: solid 1px #7bccce;
+            padding: 10px;
+        }
+
+        #user-box-edit #user-edit-form span {
+            align-self: flex-start;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 12px;
+            color: #a20101;
+            display: none;
+        }
+
+        #user-box-edit #user-edit-form .error {
+            display: inherit;
+        }
+
+    #user-box-edit .signin-form input:not(:first-of-type) {
+        margin-top: 15px !important;
+    }
+
+    #user-box-edit #user-edit-form input[type="submit"],
+    #user-box-edit #user-edit-form a {
+        margin-top: 30px !important;
+    }

@@ -52,6 +52,7 @@ a{
 }
 #body-nav .content-nav #search-form{
     grid-area: input-search;
+    height: 100%;
 }
 #body-nav .content-nav #input-search{
     font-size: 12px;
