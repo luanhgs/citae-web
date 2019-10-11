@@ -3,7 +3,7 @@ CREATE TABLE Usuario (
 	nome VARCHAR(45) NOT NULL,
 	email VARCHAR(40) NOT NULL,
 	senha VARCHAR(20) NOT NULL,
-	imgPergil IMAGE NOT NULL
+	imgPergil IMAGE
 )
 
 CREATE TABLE Administrador (
@@ -14,3 +14,6 @@ CREATE TABLE Administrador (
 	imgPergil IMAGE,
 	CPF VARCHAR(13) NOT NULL
 )
+
+--para testes
+INSERT INTO Usuario (nome, email, senha) VALUES('Luan', 'luan@email.com', 'senha')

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Citae_Application.Models;
+using Citae_Application.DAL;
 
 namespace Citae_Application.Controllers
 {
@@ -29,7 +31,18 @@ namespace Citae_Application.Controllers
         [HttpPost]
         public ActionResult Signin(Usuario user)
         {
-            return View();
+            string error = null;
+            DALUsuario DALUser = new DALUsuario();
+
+            //cadastro deu certo
+            if (DALUser.Insert(user, ref error)) {
+                return RedirectToAction("Index", "Home");
+            }
+            //cadastro não deu certo
+            else {
+                ViewBag.Error = error;
+                return View();
+            }
         }
     }
 }
