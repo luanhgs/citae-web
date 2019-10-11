@@ -1,3 +1,4 @@
+--Cadastro
 CREATE PROCEDURE sp_signin_usuario
 	@nome VARCHAR(45),
 	@email VARCHAR(40),
@@ -26,3 +27,14 @@ AS BEGIN
 END
 GO
 
+--Login
+CREATE PROCEDURE sp_login_usuario
+	@email VARCHAR(40),
+	@senha VARCHAR(20)
+AS BEGIN
+	IF(dbo.userLogin(@email, @senha) LIKE 0) BEGIN
+		RAISERROR ('Algo de errado, verifique os campos !', 16, 1)
+		RETURN
+	END
+END
+GO

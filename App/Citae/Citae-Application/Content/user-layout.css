@@ -59,17 +59,12 @@
         }
 
         #user-box-edit #user-edit-form span {
-            align-self: flex-start;
             margin-top: 10px;
             margin-left: 10px;
-            font-size: 12px;
+            font-size: 13px;
             color: #a20101;
-            display: none;
         }
 
-        #user-box-edit #user-edit-form .error {
-            display: inherit;
-        }
 
     #user-box-edit .signin-form input:not(:first-of-type) {
         margin-top: 15px !important;

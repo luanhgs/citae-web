@@ -12,5 +12,13 @@ namespace Citae_Application.Models
         public string email { get; set; }
         public string senha { get; set; }
         public byte[] imgPerfil { get; set; }
+
+        public Usuario(int idUsuario, string nome, string email, string senha, byte[] imgPerfil) {
+            this.idUsuario = idUsuario;
+            this.nome = nome;
+            this.email = email;
+            this.senha = senha;
+            this.imgPerfil = imgPerfil;
+        }
     }
 }

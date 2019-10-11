@@ -1,9 +1,16 @@
-﻿<div id="user-box-edit">
+﻿@model Citae_Application.Models.Usuario
+
+<div id="user-box-edit">
     <img src="../../Assets/img/icons/citaê.svg" alt="" srcset="">
-    <form id="user-edit-form" action="" method="post">
-        <input type="email" placeholder="Email" name="" id="">
-        <input type="password" placeholder="Senha" name="" id="">
+    @using (Html.BeginForm("Login", "User", FormMethod.Post, new { @id = "user-edit-form" }))
+    {
+        @Html.TextBoxFor(p => p.email, new { @type = "email", @placeholder = "Email" })
+        @Html.TextBoxFor(p => p.senha, new { @type = "password", @placeholder = "Senha" })
+        if (ViewBag.ErrorLogin != null)
+        {
+            <span> @ViewBag.ErrorLogin </span>
+        }
         <input type="submit" value="LOGIN">
         <a href="@Url.Action("Signin", "User")">CADASTRE-SE</a>
-    </form>
+    }
 </div>

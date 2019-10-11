@@ -36,11 +36,34 @@ namespace Citae_Application.Controllers
 
             //cadastro deu certo
             if (DALUser.Insert(user, ref error)) {
+
+                Session["UsuarioLogado"] = user; //sessão para manter o login do usuário
                 return RedirectToAction("Index", "Home");
             }
             //cadastro não deu certo
             else {
-                ViewBag.Error = error;
+                ViewBag.ErrorSignin = error;
+                return View();
+            }
+        }
+
+        //Login do Usuário
+        [HttpPost]
+        public ActionResult Login(Usuario user)
+        {
+            string error = null;
+            DALUsuario DALUser = new DALUsuario();
+
+            //cadastro deu certo
+            if (DALUser.Login(user, ref error))
+            {
+                Session["UsuarioLogado"] = DALUser.Select(user); //sessão para manter o login do usuário
+                return RedirectToAction("Index", "Home");
+            }
+            //cadastro não deu certo
+            else
+            {
+                ViewBag.ErrorLogin = error;
                 return View();
             }
         }

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model Citae_Application.Models.Usuario
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -22,9 +24,18 @@
                 <input placeholder="PESQUISAR NO CITAÊ" id="input-search" type="search" name="" id="">
             </form>
             <!--Se o usuário tiver logado a rota é User, senão a rota é Login, tudo nesse mesmo botão-->
-            <a id="btn-user" href="@Url.Action("Index", "User")">
-                <img src="~/Images/Samples/mario.jpg" alt="" srcset="">
-            </a>
+            @{
+                if (Session["UsuarioLogado"] != null) {
+                    <a id="btn-user" href="@Url.Action("Index", "User")">
+                        <img src="" alt="" srcset="">
+                    </a>
+                }
+                else {
+                    <a id="btn-user" href="@Url.Action("Login", "User")">
+                        <img src="~/Images/Samples/mario.jpg" alt="" srcset="">
+                    </a>
+                }
+            }
         </div>
     </nav>
 

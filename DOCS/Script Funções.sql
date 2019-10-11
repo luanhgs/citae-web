@@ -30,3 +30,18 @@ AS BEGIN
 	RETURN 0
 END
 GO
+
+--login do usuario
+CREATE FUNCTION userLogin(@email VARCHAR(40), @senha VARCHAR(20)) 
+	RETURNS BIT
+AS BEGIN
+	DECLARE @senhaUser VARCHAR(20)
+	SELECT @senhaUser = senha FROM Usuario WHERE email = @email
+
+	IF(@senhaUser LIKE @senha) BEGIN
+		RETURN 1
+	END
+
+	RETURN 0
+END
+GO

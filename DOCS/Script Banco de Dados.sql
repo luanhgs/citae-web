@@ -15,5 +15,3 @@ CREATE TABLE Administrador (
 	CPF VARCHAR(13) NOT NULL
 )
 
---para testes
-INSERT INTO Usuario (nome, email, senha) VALUES('Luan', 'luan@email.com', 'senha')
