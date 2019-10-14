@@ -4,8 +4,8 @@
     <img src="../../Assets/img/icons/citaê.svg" alt="" srcset="">
     @using (Html.BeginForm("Login", "User", FormMethod.Post, new { @id = "user-edit-form" }))
     {
-        @Html.TextBoxFor(p => p.email, new { @type = "email", @placeholder = "Email" })
-        @Html.TextBoxFor(p => p.senha, new { @type = "password", @placeholder = "Senha" })
+        @Html.TextBoxFor(model => model.email, new { @type = "email", @placeholder = "Email" })
+        @Html.TextBoxFor(model => model.senha, new { @type = "password", @placeholder = "Senha" })
         if (ViewBag.ErrorLogin != null)
         {
             <span> @ViewBag.ErrorLogin </span>
@@ -14,3 +14,4 @@
         <a href="@Url.Action("Signin", "User")">CADASTRE-SE</a>
     }
 </div>
+

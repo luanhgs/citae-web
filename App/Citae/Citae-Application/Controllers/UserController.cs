@@ -16,16 +16,6 @@ namespace Citae_Application.Controllers
             ViewBag.Title = "Dados do Usuário";
             return View();
         }
-        public ActionResult Login()
-        {
-            ViewBag.Title = "Entre em sua conta !";
-            return View();
-        }
-        public ActionResult Signin()
-        {
-            ViewBag.Title = "Junte-se a nós !!";
-            return View();
-        }
 
         //Cadastro do Usuário
         [HttpPost]
@@ -35,16 +25,24 @@ namespace Citae_Application.Controllers
             DALUsuario DALUser = new DALUsuario();
 
             //cadastro deu certo
-            if (DALUser.Insert(user, ref error)) {
+            if (DALUser.Insert(user, ref error))
+            {
 
                 Session["UsuarioLogado"] = user; //sessão para manter o login do usuário
                 return RedirectToAction("Index", "Home");
             }
             //cadastro não deu certo
-            else {
+            else
+            {
                 ViewBag.ErrorSignin = error;
                 return View();
             }
+        }
+
+        public ViewResult Signin()
+        {
+            ViewBag.Title = "Junte-se a nós !!";
+            return View();
         }
 
         //Login do Usuário
@@ -67,5 +65,12 @@ namespace Citae_Application.Controllers
                 return View();
             }
         }
+
+        public ViewResult Login()
+        {
+            ViewBag.Title = "Entre em sua conta !";
+            return View();
+        }
+
     }
 }
