@@ -73,9 +73,13 @@ a {
             justify-content: center;
             align-items: center;
         }
+            #body-nav .content-nav #btn-user i {
+                font-size: 20px;
+                color: #35b7ff;
+            }
 
             #body-nav .content-nav #btn-user > img {
-                width: 100%;
+                width: 80%;
                 border-radius: 100%;
             }
 

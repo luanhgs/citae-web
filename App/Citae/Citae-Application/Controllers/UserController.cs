@@ -13,63 +13,78 @@ namespace Citae_Application.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Dados do Usuário";
-            return View();
+            if(Session["UsuarioLogado"] != null)
+            {
+                ViewBag.Title = $"Olá, {(Session["UsuarioLogado"] as Usuario).nome}";
+                ViewBag.User = Session["UsuarioLogado"];
+                return View();
+            }
+            else
+                return RedirectToAction("Index", "Home");
+            
+        }
+
+        public ActionResult Signin()
+        {
+            if (Session["UsuarioLogado"] != null)
+                return RedirectToAction("Index", "Home");
+            else {
+                ViewBag.Title = "Junte-se a nós !!";
+                return View();
+            }
         }
 
         //Cadastro do Usuário
         [HttpPost]
-        public ActionResult Signin(Usuario user)
+        public ActionResult Signin(string nome, string email, string senha)
         {
             string error = null;
             DALUsuario DALUser = new DALUsuario();
+            Usuario user = new Usuario(nome, email, senha);
 
             //cadastro deu certo
-            if (DALUser.Insert(user, ref error))
-            {
+            if (DALUser.Insert(user, ref error)) {
 
                 Session["UsuarioLogado"] = user; //sessão para manter o login do usuário
                 return RedirectToAction("Index", "Home");
             }
             //cadastro não deu certo
-            else
-            {
+            else {
                 ViewBag.ErrorSignin = error;
                 return View();
             }
         }
 
-        public ViewResult Signin()
+        public ActionResult Login()
         {
-            ViewBag.Title = "Junte-se a nós !!";
-            return View();
+            if (Session["UsuarioLogado"] != null)
+                return RedirectToAction("Index", "Home");
+            else
+            {
+                ViewBag.Title = "Entre em sua conta !";
+                return View();
+            }
+
         }
 
         //Login do Usuário
         [HttpPost]
-        public ActionResult Login(Usuario user)
+        public ActionResult Login(string email, string senha)
         {
             string error = null;
             DALUsuario DALUser = new DALUsuario();
+            Usuario user = new Usuario(email, senha);
 
             //cadastro deu certo
-            if (DALUser.Login(user, ref error))
-            {
+            if (DALUser.Login(user, ref error)) {
                 Session["UsuarioLogado"] = DALUser.Select(user); //sessão para manter o login do usuário
                 return RedirectToAction("Index", "Home");
             }
             //cadastro não deu certo
-            else
-            {
+            else {
                 ViewBag.ErrorLogin = error;
                 return View();
             }
-        }
-
-        public ViewResult Login()
-        {
-            ViewBag.Title = "Entre em sua conta !";
-            return View();
         }
 
     }

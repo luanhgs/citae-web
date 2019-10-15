@@ -3,7 +3,7 @@ CREATE TABLE Usuario (
 	nome VARCHAR(45) NOT NULL,
 	email VARCHAR(40) NOT NULL,
 	senha VARCHAR(20) NOT NULL,
-	imgPergil IMAGE
+	imgPerfil IMAGE
 )
 
 CREATE TABLE Administrador (
@@ -11,7 +11,8 @@ CREATE TABLE Administrador (
 	nome VARCHAR(45) NOT NULL,
 	email VARCHAR(40) NOT NULL,
 	senha VARCHAR(20) NOT NULL,
-	imgPergil IMAGE,
+	imgPerfil IMAGE,
 	CPF VARCHAR(13) NOT NULL
 )
+
 

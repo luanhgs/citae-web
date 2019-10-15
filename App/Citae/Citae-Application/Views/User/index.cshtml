@@ -1,9 +1,11 @@
 ﻿<div id="user-box-edit">
-    <img src="~/Images/Samples/mario.jpg" alt="" srcset="">
-    <span>Mário Sérgio</span>
-    <form id="user-edit-form" action="" method="post">
-        <input type="email" placeholder="Email" name="" id="">
-        <input type="password" placeholder="Senha" name="" id="">
+    <img src="~/Images/Samples/user-non-img.jpg" alt="" srcset="">
+    <span>@ViewBag.User.nome</span>
+    @using (Html.BeginForm("Index", "User", FormMethod.Post, new { @id = "user-edit-form" }))
+    {
+        <input value="@ViewBag.User.nome" type="text" placeholder="Nome" name="nome" id="">
+        <input value="@ViewBag.User.email" type="email" placeholder="Email" name="email" id="">
+        <input value="@ViewBag.User.senha" type="password" placeholder="Senha" name="senha" id="">
         <input type="submit" value="SALVAR">
-    </form>
+    }
 </div>

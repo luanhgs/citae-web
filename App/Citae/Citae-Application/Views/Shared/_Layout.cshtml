@@ -27,12 +27,12 @@
             @{
                 if (Session["UsuarioLogado"] != null) {
                     <a id="btn-user" href="@Url.Action("Index", "User")">
-                        <img src="" alt="" srcset="">
+                        <img src="~/Images/Samples/user-non-img.jpg" >
                     </a>
                 }
                 else {
                     <a id="btn-user" href="@Url.Action("Login", "User")">
-                        <img src="~/Images/Samples/mario.jpg" alt="" srcset="">
+                        <i class="fas fa-sign-in-alt"></i>
                     </a>
                 }
             }

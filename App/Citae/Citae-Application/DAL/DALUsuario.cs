@@ -26,12 +26,13 @@ namespace Citae_Application.DAL
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows) {
+                    dr.Read();
                     userReturn = new Usuario(
                         int.Parse(dr["idUsuario"].ToString()),
                         dr["nome"].ToString(),
                         dr["email"].ToString(),
                         dr["senha"].ToString(),
-                        (byte[])dr["imgPerfil"]
+                        (dr["imgPerfil"] != DBNull.Value && dr["imgPerfil"] != null) ? (byte[])dr["imgPerfil"] : null
                     );
                 }
                 connection.Close();

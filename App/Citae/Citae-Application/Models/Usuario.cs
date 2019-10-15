@@ -20,5 +20,25 @@ namespace Citae_Application.Models
             this.senha = senha;
             this.imgPerfil = imgPerfil;
         }
+
+        public Usuario(int idUsuario, string nome, string email, string senha)
+        {
+            this.idUsuario = idUsuario;
+            this.nome = nome;
+            this.email = email;
+            this.senha = senha;
+        }
+
+        public Usuario(string email, string senha) {
+            this.email = email;
+            this.senha = senha;
+        }
+
+        public Usuario(string nome, string email, string senha)
+        {
+            this.nome = nome;
+            this.email = email;
+            this.senha = senha;
+        }
     }
 }

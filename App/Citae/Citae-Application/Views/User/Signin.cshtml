@@ -3,9 +3,9 @@
 <div id="user-box-edit">
     @using (Html.BeginForm("Signin", "User", FormMethod.Post, new { @id = "user-edit-form", @class = "signin-form" }))
     {
-        @Html.TextBoxFor(p => p.nome, new { @placeholder = "Nome" })
-        @Html.TextBoxFor(p => p.email, new { @type = "email", @placeholder = "Email" })
-        @Html.TextBoxFor(p => p.senha, new { @type = "password", @placeholder = "Senha" })
+        <input type="text" placeholder="Nome" name="nome">
+        <input type="email" placeholder="Email" name="email">
+        <input type="password" placeholder="Senha" name="senha">
         if (ViewBag.ErrorSignin != null) {
             <span> @ViewBag.ErrorSignin </span>
         }
