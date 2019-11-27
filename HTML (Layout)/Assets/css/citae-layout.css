@@ -117,8 +117,45 @@ a{
     width: 30px;
 }
 main{
-    position: relative;
+    /*position: relative;*/
     top: 74px;
     width: 90%;
     left: 5%;
+}
+main #detail-style{
+    width: 100%;
+    height: 190px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+main .authors::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../img/samples/julio-cesar-autor.jpg");
+    background-size: cover;
+    filter: grayscale(100%) brightness(50%);
+}
+main #detail-style .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
+main #detail-style .details span{
+    text-transform: uppercase;
+    color: white;
+    padding: 0 25px;
+    font-weight: 300;
+}
+main #detail-style .details span:nth-child(1){
+    font-size: 20px;
+}
+main #detail-style .details span:nth-child(2){
+    font-size: 9px;
 }
