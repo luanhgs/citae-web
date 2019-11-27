@@ -159,3 +159,55 @@ main #detail-style .details span:nth-child(1){
 main #detail-style .details span:nth-child(2){
     font-size: 9px;
 }
+main #list-authors{
+    width: 100vw;
+    height: auto;
+    margin-top: 210px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+main #list-authors .author{
+    width: 80%;
+    max-width: 500px;
+    height: 60px;
+    box-shadow: 0px 0px 5px #d8d8d8;
+    border-radius: 40px;
+    display: inline-flex;
+    overflow: hidden;
+}
+main #list-authors .author:not(:nth-child(1)){
+    margin-top: 20px;
+}
+main #list-authors .author .sp{
+    height: 100%;
+}
+main #list-authors .author .sp:nth-child(1){
+    width: calc(100% - 70px);
+    display: flex;
+    align-items: center;
+}
+main #list-authors .author .sp:nth-child(1) img{
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 100%;
+}
+main #list-authors .author .sp:nth-child(1) div span{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+main #list-authors .author .sp:nth-child(1) div{
+    margin-left: 10px;
+}
+main #list-authors .author .sp:nth-child(1) div span:nth-child(1){
+    font-size: 13px;
+}
+main #list-authors .author .sp:nth-child(1) div span:nth-child(2){
+    font-size: 8px;
+    display: block;
+    margin-top: 2px;
+}
+main #list-authors .author .sp:nth-child(2){
+    width: 70px;
+}
