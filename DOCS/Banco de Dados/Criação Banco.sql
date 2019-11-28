@@ -41,7 +41,7 @@ GO
 CREATE TABLE Categoria(
 	idCategoria INT IDENTITY,
 	nome VARCHAR(45) NOT NULL,
-	img BINARY(100) NOT NULL,
+	img IMAGE NOT NULL,
 	PRIMARY KEY(idCategoria)
 )
 GO
